@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <script>
+      function table(event) {
+        let num = event.target.value;
+        const myDiv = document.getElementById(`data`);
+        myDiv.innerHTML='';
+        for (let i = 10; i >= 1; i--) {
+           myDiv.innerHTML = `${myDiv.innerHTML}<div class="text-xl text-indigo-500"> ${num} x ${i} = ${num * i} </div>`
+          
+         }
+      }
+    </script>
+
+
+
+
+    
+    <input class="border-4" type="number" placeholder= "Which table you want to learn?" onchange="table(event)"/>
+    <div id="data"></div>
+
+    
+
+    
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
